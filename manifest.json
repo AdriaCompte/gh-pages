@@ -1,4 +1,12 @@
-{
-  "name": "Push Notifications",
+{  
+  "name": "Push Test",  
+  "short_name": "Push Test",  
+  "icons": [{  
+        "src": "http://www.www8-hp.com/es/es/images/i/hpi/header-footer/caas-hf-v3.2/hpi-hp-logo-pr.gif",  
+        "sizes": "70x70",
+        "type": "image/gif"
+      }],  
+  "start_url": "/index.html?homescreen=1",  
+  "display": "standalone",  
   "gcm_sender_id": "918080428450"
 }
