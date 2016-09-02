@@ -14,6 +14,7 @@ window.addEventListener('load', function () {
     // Check that service workers are supported, if so, progressively  
     // enhance and add push messaging support, otherwise continue without it.  
     if ('serviceWorker' in navigator) {
+        console.log('Service Worker is supported');
         navigator.serviceWorker.register('/push-notification/js/sw.js')
             .then(initialiseState);
     } else {
@@ -44,6 +45,7 @@ window.addEventListener('load', function () {
 
         // We need the service worker registration to check for a subscription  
         navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
+            console.log(':^)', serviceWorkerRegistration);
             // Do we already have a push message subscription?  
             serviceWorkerRegistration.pushManager.getSubscription()
                 .then(function (subscription) {
