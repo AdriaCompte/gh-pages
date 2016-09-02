@@ -23,6 +23,7 @@ window.addEventListener('load', function () {
 
     // Once the service worker is registered set the initial state  
     function initialiseState() {
+        console.log('GOT HERE');
         // Are Notifications supported in the service worker?  
         if (!('showNotification' in ServiceWorkerRegistration.prototype)) {
             console.warn('Notifications aren\'t supported.');
@@ -45,6 +46,7 @@ window.addEventListener('load', function () {
 
         // We need the service worker registration to check for a subscription  
         navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
+            console.log('THIS IS WORKING');
             console.log(':^)', serviceWorkerRegistration);
             // Do we already have a push message subscription?  
             serviceWorkerRegistration.pushManager.getSubscription()
